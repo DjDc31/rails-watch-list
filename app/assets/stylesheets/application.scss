@@ -10,3 +10,194 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+nav {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center; /* Pour centrer les éléments du menu */
+}
+
+ul {
+  list-style-type: none;
+  margin: 18px;
+  padding: 18px;
+}
+
+li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+li:last-child {
+  margin-right: 0;
+}
+
+#logo {
+  float: left;
+  width: 100px; /* Ajustez la taille selon vos besoins */
+  height: 100px; /* Ajustez la taille selon vos besoins */
+}
+
+#avatar {
+  float: right;
+  width: 100px;
+  height: 100px;
+  margin-top: -39px; /* Ajoutez cette règle pour remonter l'image */
+}
+
+
+li a {
+  text-decoration: none;
+  color: #000; /* Supprime la décoration de lien par défaut */
+}
+
+li a:hover {
+  color: #ec1d25;
+}
+
+li a:hover::after {
+  content: ""; /* Ajoute un pseudo-élément après le texte */
+  display: block;
+  background-color: #000; /* Couleur de fond du pseudo-élément */
+  height: 2px; /* Hauteur du pseudo-élément */
+  margin: 0 auto; /* Centre le pseudo-élément horizontalement */
+}
+
+body, h1, h2, h3, h4, h5, h6, p{
+  font-family: 'Abril Fatface', cursive;
+}
+
+.content {
+  padding-bottom: 50px; /* Ajustez cette valeur en fonction de la hauteur de votre footer */
+}
+
+.cards a {
+  color: white;
+  text-decoration: none;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.cards a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+h1 {
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 60px;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translateY(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+    transform: translateY(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translateY(0px);
+  }
+}
+
+.card-product {
+  overflow: hidden;
+  height: 150px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+.my-form {
+  max-width: 400px; /* Définissez la largeur maximale souhaitée pour le formulaire */
+  margin: 0 auto; /* Centrez le formulaire horizontalement */
+}
+
+/* Smallest device */
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

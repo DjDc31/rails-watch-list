@@ -1,0 +1,13 @@
+<h1>Ma Filmliste:</h1>
+
+<div id="liste">
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <%= link_to list_path(list) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('camera.jpg') %>)">
+          <p><%= render list %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

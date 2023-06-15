@@ -1,0 +1,28 @@
+footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  color: #333;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000; /* Supprime la décoration de lien par défaut */
+}
+
+footer a:hover {
+  color: #ec1d25;
+}
+
+footer a:hover::after {
+  content: ""; /* Ajoute un pseudo-élément après le texte */
+  display: block;
+  background-color: #000; /* Couleur de fond du pseudo-élément */
+  height: 2px; /* Hauteur du pseudo-élément */
+  margin: 0 auto; /* Centre le pseudo-élément horizontalement */
+  width: 30%; /* Largeur du pseudo-élément */
+}

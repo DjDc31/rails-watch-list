@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsWatchList</title>
+    <title>AlloCyrille - Mes listes de films</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', 'footer' %>
   </head>
 
-  <body>
+<body>
+  <nav>
+      <%= link_to image_tag("AlloCyrille.png", alt: "Mon logo", id:"logo")%>
+    <ul>
+      <li><%= link_to "Accueil", lists_path %></li>
+      <li><%= link_to "Créer une liste", new_list_path %></li>
+      <!-- Ajoutez les autres liens de menu ici -->
+      <%= image_tag "https://avatars.githubusercontent.com/u/114781337?v=4", class: "avatar-large", alt: "avatar-large", id:"avatar" %>
+
+    </ul>
+  </nav>
+
+  <main class="content">
     <%= yield %>
-  </body>
+  </main>
+  <%= render 'shared/footer' %>
+</body>
 </html>
