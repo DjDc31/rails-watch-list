@@ -26,3 +26,17 @@ footer a:hover::after {
   margin: 0 auto; /* Centre le pseudo-élément horizontalement */
   width: 30%; /* Largeur du pseudo-élément */
 }
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Add this line to center the content horizontally */
+}
+
+.footer-container p {
+  margin: 0; /* Remove the margin-left property */
+}
+
+.beer {
+  float: left;
+}

@@ -131,7 +131,7 @@ h1 {
 
 .card-product {
   overflow: hidden;
-  height: 150px;
+  height: 200px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -156,6 +156,16 @@ h1 {
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 7; /* Limite le nombre de lignes à 3 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Ajoute les points de suspension pour indiquer le texte tronqué */
+}
+
+.card-product-actions {
+  margin-top: auto; /* Pour aligner les actions en bas de la carte */
+  text-align: right; /* Pour aligner le bouton supprimer à droite */
 }
 
 .card-product .card-product-infos {
