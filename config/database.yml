@@ -5,7 +5,7 @@ default: &default
 
 development:
   <<: *default
-  database: allocyrille
+  database: rails_watch_list_development
 
 test:
   <<: *default
